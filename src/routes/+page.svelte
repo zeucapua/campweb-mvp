@@ -1,6 +1,7 @@
 <script lang="ts">
   // still very funny that im using a package i made
   import { Trace, TLine } from "trace-svelte";
+  import Codepage from "$lib/Codepage.svelte";
 
   // "universal"
   let step = 0;
@@ -26,12 +27,17 @@
 
 
   // PAGE 2: used to map PAGE 1 functionality with component/types
+  let page2_source = String.raw`const name = "Derry";
+  console.log(name);
+  // ta - da ~`;
+
   let page2 = [
     [],
-    [3],
+    [1,2],
     [2],
-    [1]
-  ];
+    [3]
+  ]
+
 
   let is_playing = false;
   let play_interval : ReturnType<typeof setInterval>; 
@@ -107,11 +113,7 @@
 
     {#if current_page === 2}
       <div class="p-4 border border-green-600">
-        <Trace {step} highlights={page2}>
-          <TLine>// backwards~</TLine>
-          <TLine>const name = "Louis";</TLine>
-          <TLine>console.log(name);</TLine>
-        </Trace>
+        <Codepage {step} highlights={page2} code={page2_source} />
       </div>
     {/if}
   </div>
