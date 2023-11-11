@@ -1,11 +1,13 @@
 campweb mvp only
-
-topics
-- [ ] partykit in sveltekit
-- [ ] hono + htmx
-- [ ] javascript basics (var, func, if/else, etc.) 
+see /src/routes/+page.svelte for details
 
 tech ?
-- [ ] trace-svelte: multiple "pages"
-- [ ] video player with chapters (yt)
+- [x] trace-svelte: multiple "pages"
+- [x] video player with chapters (yt)
 - [ ] match trace and chapters
+
+topics
+- [ ] htmx delete speedrun
+- [ ] partykit in sveltekit
+- [ ] javascript basics (var, func, if/else, etc.) 
+

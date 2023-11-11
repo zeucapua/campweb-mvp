@@ -3,9 +3,8 @@
 </script>
 
 <main class="flex flex-col gap-8 w-full h-full min-w-screen min-h-screen p-8"> 
-  <div>
+  <div class="flex flex-col gap-4">
     <h1 class="text-3xl font-bold">Camp Web MVP</h1>
-    <p class="font-bold italic">see README for details</p>
 
     <section>
       <h2 class="text-xl font-bold text-green-600 line-through">task: multi (Trace) "pages"</h2>
