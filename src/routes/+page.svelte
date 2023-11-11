@@ -1,13 +1,10 @@
 <script lang="ts">
-  // testing if AutoplayExample from my package still works 
-  // update: it works
-
   // still very funny that im using a package i made
   import { Trace, TLine } from "trace-svelte";
 
   let step = 0;
   let highlights = [
-    // TODO: make starting position be a variable to pass in? /refactor trace-svelte
+    // [REFACTOR] (<Trace>): make starting position be a variable to pass in? 
     [], // need empty if you want none highlighted while "resting at step 1"
     [1,2],
     [2],
@@ -37,46 +34,23 @@
   }
 </script>
 
-<div class="description">
-  <h3>Autoplay Example</h3>
-  <button on:click={togglePlaying}>
-    { is_playing ? "Stop" : "Play" }
-  </button>
-  <p>{step + 1} / {highlights.length}</p>
-</div>
-<p>
-  Since controlling the step only requires changing the value, you can use functions to have an autoplay function.
-</p>
-<div class="trace">
+<main class="flex flex-col gap-8 w-full h-full min-w-screen min-h-screen p-8"> 
+  <div>
+    <h3 class="text-xl">Camp Web MVP</h3>
+    <p>current task: multi (Trace) "pages"</p>
+    <p>see read me for details</p>
+  </div>
+
+  <div class="flex gap-4 items-center">
+    <button on:click={togglePlaying} class="px-4 py-2 border rounded-xl">
+      { is_playing ? "Stop" : "Play" }
+    </button>
+    <p>{step + 1} / {highlights.length}</p>
+  </div>
+
   <Trace {step} {highlights}>
     <TLine>// print the following variable</TLine>
     <TLine>const name = "Louis";</TLine>
     <TLine>console.log(name);</TLine>
   </Trace>
-</div> 
-
-
-<style>
-  .trace {
-    width: 33%;
-    margin: 0 auto;
-    font-family: monospace;
-    border: 2px solid black;
-  }
-  
-  .description {
-    display: inline-flex;
-    margin: 0 auto;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-  }
-
-  button {
-    width: fit-content;
-    height: fit-content;
-    padding: 4px;
-  }
-
-  p { margin: 0 auto; }
-</style>
+</main>
