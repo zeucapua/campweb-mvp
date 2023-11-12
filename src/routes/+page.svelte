@@ -21,12 +21,13 @@
 
     <section>
       <h2 class="text-xl font-bold text-blue-500">task: mvp</h2>
-      <p class="text-blue-500">sub task: cue point triggering step changes</p>
-      <p class="text-neutral-500">sub task: ???</p>
+      <p class="line-through text-green-500">sub task: cue point triggering step changes</p>
+      <p class="text-blue-500">sub task: basic styling</p>
     </section>
 
     <section>
       <h2 class="text-xl font-bold text-neutral-500">task: extra details</h2>
+      <p class="text-neutral-500">sub task: refactor to componentize and data models</p>
       <p class="text-neutral-500">sub task: video player details 
         (
           see 
